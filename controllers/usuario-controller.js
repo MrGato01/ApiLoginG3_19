@@ -69,7 +69,6 @@ UsuarioController.post = (req, res, next) => {
         ContrasenaExpira : req.body.ContrasenaExpira,
         DiasCaducidad : req.body.DiasCaducidad,
         Rol : req.body.Rol,
-        NumeroIntentoIncorrectos : req.body.NumeroIntentoIncorrectos,
     }
     console.log(usuario)
 

@@ -10,7 +10,7 @@ var conn = require("../config/db-connection"),
     "SELECT * FROM USUARIO WHERE CODIGOUSUARIO = $1", [CodigoUsuario], usuario);
 
     UsuarioModel.post = (data, usuario) => 
-    conn.query( "call public.sp_usuario_insert ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)",
+    conn.query( "call public.sp_usuario_insert ($1,$2,$3,$4,$5,$6,$7,$8,$9)",
     [
       data.CodigoUsuario,
       data.Nombre,
@@ -20,8 +20,7 @@ var conn = require("../config/db-connection"),
       data.Estado,
       data.ContrasenaExpira,
       data.DiasCaducidad,
-      data.Rol,
-      data.NumeroIntentoIncorrectos
+      data.Rol
     ],
     usuario);
 
