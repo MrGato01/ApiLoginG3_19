@@ -11,6 +11,7 @@ var UsuarioController = require("../controllers/usuario-controller"),
   
    .get("/listaUsuarios/getAll", ListaUsuariosController.getAll)
    .post("/usuario/post", UsuarioController.post)
+   .post("/usuario/ingresar/:codigousuario/:contrasena", UsuarioController.getOne)
 
    .use(UsuarioController.error404)
 
